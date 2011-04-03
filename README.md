@@ -19,7 +19,7 @@ sshauthkeys is a simple define based wrapper. It expects a nested hashmap named 
 
 sshauthkeys defines the key(s) for a user. You can call it with the name of single key or with an array containing multiple key identifiers.
 
-   # declare ssh keys for later usage
+   # declare ssh keys in nested hashmap for later usage
    $ssh_keys = {
            "admin@domain.tld" => {
                    "type" => "ssh-rsa",
