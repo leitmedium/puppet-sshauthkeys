@@ -1,7 +1,7 @@
 sshauthkeys
 ===
 
-sshauthkeys is a simple and lightweight wrapper for puppet's ssh_auth_keyfile. It allows you to easily add one ssh auth key to multiple login users and keep your configution clean.
+sshauthkeys is a simple and lightweight wrapper for puppet's ssh_authorized_key. While "ssh_authorized_key" by default is not able to enroll the same key for different users (without tweaking), sshauthkeys allows you to easily add one ssh auth key to multiple login users and keep your configution clean.
 
 Installation
 ---
