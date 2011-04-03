@@ -40,7 +40,7 @@ sshauthkeys defines the key(s) for a user. You can call it with the name of sing
    sshauthkeys{ user2: keys => [ $team ] }
    sshauthkeys{ user3: keys => [ $team ] }
 
-Please note: sshauthkeys is define based so you can only call "sshauthkeys" for a user exactly once. If you want to enroll multiple keys for one user you have to put them in an array to make sure you only need one sshauthkeys call.
+Please note: sshauthkeys is define based so you can only call "sshauthkeys" for a user exactly once. If you want to enroll multiple keys for one user you have to put them in an array to make sure you only need one sshauthkeys call. 
 
 Todo
 ---
