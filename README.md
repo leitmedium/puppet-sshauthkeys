@@ -31,10 +31,13 @@ sshauthkeys defines the key(s) for a user. You can call it with the name of sing
 	                "type" => "ssh-dsa",
 	                "key" => "key-content", },
 	}
+	
 	# just enroll one key for root user
 	sshauthkeys{ root: keys => 'admin@domain.tld' }
+	
 	# enroll multiple keys for a user
 	sshauthkeys{ user: keys => [ 'admin@domain.tld','user@domain.tld'] }
+	
 	# if you want to reuse a team, make it an array for multiple defines 
 	$team = [ 'admin@domain.tld', 'user2@domain.tld' ]
 	sshauthkeys{ user2: keys => [ $team ] }
