@@ -54,5 +54,8 @@ There is already support for "absent" keys by calling sshauthkeys like
 
 Currently you cannot mix absent and present keys besides not being able to call sshauthkeys more than one time for a user - so this feature is quite useless yet.
 	
+Author
+---
 
+sshauthkeys is developed and maintained by Caspar Clemens Mierau <ccm at screenage dot de>
 
