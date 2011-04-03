@@ -19,26 +19,29 @@ sshauthkeys is a simple define based wrapper. It expects a nested hashmap named 
 
 sshauthkeys defines the key(s) for a user. You can call it with the name of single key or with an array containing multiple key identifiers.
 
-        # declare ssh keys for later usage
-        $ssh_keys = {
-                "admin@domain.tld" => {
-                        "type" => "ssh-rsa",
-                        "key" => "key-content", },
-                "user@domain.tld" => {
-                        "type" => "ssh-dsa",
-                        "key" => "key-content", },
-                "user2@domain.tld" => {
-                        "type" => "ssh-dsa",
-                        "key" => "key-content", },
-        }
-        # just enroll one key for root user
-        sshauthkeys{ root: keys => 'admin@domain.tld' }
-	# enroll multiple keys for a user
-        sshauthkeys{ user: keys => [ 'admin@domain.tld','user@domain.tld'] }
-	# if you want to reuse a team, make it an array for multiple defines 
-	$team = [ 'admin@domain.tld', 'user2@domain.tld' ]
-        sshauthkeys{ user2: keys => [ $team ] }
-        sshauthkeys{ user3: keys => [ $team ] }
+# declare ssh keys for later usage
+   $ssh_keys = {
+           "admin@domain.tld" => {
+                   "type" => "ssh-rsa",
+                   "key" => "key-content", },
+           "user@domain.tld" => {
+                   "type" => "ssh-dsa",
+                   "key" => "key-content", },
+           "user2@domain.tld" => {
+                   "type" => "ssh-dsa",
+                   "key" => "key-content", },
+   }
+
+   # just enroll one key for root user
+   sshauthkeys{ root: keys => 'admin@domain.tld' }
+
+   # enroll multiple keys for a user
+   sshauthkeys{ user: keys => [ 'admin@domain.tld','user@domain.tld'] }
+
+   # if you want to reuse a team, make it an array for multiple defines 
+   $team = [ 'admin@domain.tld', 'user2@domain.tld' ]
+   sshauthkeys{ user2: keys => [ $team ] }
+   sshauthkeys{ user3: keys => [ $team ] }
 
 Please note: sshauthkeys is define based so you can only call "sshauthkeys" for a user exactly once. If you want to enroll multiple keys for one user you have to put them in an array to make sure you only need one sshauthkeys call.
 
