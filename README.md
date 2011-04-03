@@ -57,5 +57,5 @@ Currently you cannot mix absent and present keys besides not being able to call 
 Author
 ---
 
-sshauthkeys is developed and maintained by Caspar Clemens Mierau <ccm at screenage dot de>
+sshauthkeys is developed and maintained by Caspar Clemens Mierau <ccm@screenage.de>
 
