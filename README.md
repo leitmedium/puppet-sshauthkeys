@@ -8,8 +8,8 @@ Installation
 
 Put the project in your puppet's modules directory and make sure it's named "sshauthkeys". E.g.:
 
-   $ cd /etc/puppet/modules
-   $ git clone git://github.com/damokles/puppet-sshauthkeys.git sshauthkeys
+	$ cd /etc/puppet/modules
+	$ git clone git://github.com/damokles/puppet-sshauthkeys.git sshauthkeys
 
 
 Usage
