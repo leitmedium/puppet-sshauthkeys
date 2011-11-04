@@ -5,7 +5,7 @@ define sshauthkeys::helper ($user,$ensure='present') {
 	if has_key($ssh_keys["${name2}"], "ensure") {
 		$ensurekey = $ssh_keys["${name2}"]["ensure"]
 	} else {
-		$ensurekey = $present
+		$ensurekey = $ensure
 	}
         ssh_authorized_key { "puppet: ${name2} ${user}":
           ensure => $ensurekey,
